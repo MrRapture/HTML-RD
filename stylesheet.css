@@ -1,0 +1,181 @@
+﻿body {
+    background-color: #076d4b;
+}
+h1 {
+    color: #621c37;
+    font-family: Arial;
+    font-size: 10px;
+    padding: 0px 0px 0px 0px;
+}
+
+a {
+    color: #d49624;
+    padding: 1px 1px 1px 1px;
+}
+span {
+    color: orangered;
+    padding: 0px 0px 0px 0px;
+}
+img{
+    height:50px;
+    width:50px;
+    padding:0px 0px 0px 0px;
+    opacity: 0.5;
+}
+
+p{
+    text-decoration-color:black;
+    font-family:Arial;
+    font-size: 10px;
+    color:gainsboro;
+    
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-gap: 0em; /*Either 0 or 1 figure it out*/
+    font-size: small;
+    font-family: Arial;
+}
+    .wrapper > div {
+        background-color: black;
+        border: 0.2px;
+        border-style: solid;
+        border-color: #95e6bc; /* NO DOT */
+        border-style: solid;
+        grid-row-gap: 0em;
+        padding: 5px 0px 0px 0px; /*Push Down from Top, Push Left from Right, Push Down from Bottom, Push from left to right*/
+    }
+div {
+    border-color: lime;
+    border-style: hidden;
+    padding: 5px 0px 0px 0px;
+    background-image: url(images/Background.jpg);
+    animation-name: example;
+    animation-duration: 10s;
+}
+@keyframes example {
+    from {
+        background-image: url(images/Background.jpg);
+    }
+
+    to {
+        background-image: url(images/Background2.jpg);
+    }
+}
+.footer {    
+    position: absolute;
+    background-color: black;
+    left: 0%;
+    right:0%;
+    top:130%;
+    bottom:10%;
+    width: 100%;
+    height:20px;
+    text-align: left;    
+}
+.box1:hover img {
+    height: 50px;
+    width: 50px;
+    padding: 0px 0px 0px 0px;
+    opacity: 0.5;
+    transition: 0.9s;
+}
+.box2:hover img {
+    opacity: 0;
+}
+
+/*Media Queries 
+    
+                Bellow, Changes from Phone View into Laptop View*/
+
+@media screen and (min-width:460px) {
+    body {
+        background-color: rebeccapurple;
+    }
+    h1 {
+        color: #621c37;
+        font-family: Arial;
+        font-size: 22px;
+    }
+    span {
+        color: #36bcb9;
+        padding: 0px 0px 0px 0px;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        padding: 3px 8.4px 0px 0px;
+        opacity: 0.8;
+    }
+    p {
+        text-decoration-color: black;
+        font-family: 'Courier New';
+        font-size: 22px;
+        color: navajowhite;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 0fr 0fr 0fr;
+        grid-column-gap: 5em;
+        grid-row-gap: 5em;
+        grid-gap: 3em;
+        font-size: large;
+        font-family: Arial;
+        font-display: swap;
+    }
+        .wrapper > div {
+            background-color: black;
+            border: 5px;
+            border-style: solid;
+            border-color: blueviolet; /* NO DOT */
+            border-style: solid;
+            grid-row-gap: 2em;
+            padding: 0px 10px 0px 0px; /*Push Down from Top, Push Left from Right, Push Down from Bottom, Push from left to right*/
+        }
+    div {
+        border-color: black;
+        border-style: hidden;
+        padding: 40px 20px 40px 30px;
+        background-image: url(images/Background.jpg);
+        animation-name: example;
+        animation-duration: 10s;
+    }
+
+    @keyframes example {
+        from {
+            background-image: url(images/Background.jpg);
+        }
+
+        to {
+            background-image: url(images/Background2.jpg);
+        }
+    }
+    container {
+    }
+    .footer {
+        position: absolute;
+        background-color: navy;
+        left: 0.5%;
+        right: 0.8%;
+        top: 200%;
+        bottom: 10%;
+        width: 100%;
+        text-align: left;
+    }
+    .box1:hover img {
+        height: 50px;
+        width: 50px;
+        padding: 0px 0px 0px 0px;
+        opacity: 0.5;
+        transition: 0.9s;
+    }
+    .box2:hover img {
+        opacity: 0;
+    }
+ }
